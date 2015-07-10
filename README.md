@@ -5,6 +5,6 @@ A demo project in c plus plus using make
 
 `cd hi-make-cpp`
 
-* without using make: `g++ main.cpp hello.cpp -o hello
+* without using make: `g++ main.cpp hello.cpp -o hello`
 * with using make: `make`
 
