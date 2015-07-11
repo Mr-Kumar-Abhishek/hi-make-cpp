@@ -8,3 +8,10 @@ A demo project in c plus plus using make
 * without using make: `g++ main.cpp hello.cpp -o hello`
 * with using make: `make`
 
+### After builds
+
+If compiled with make,
+
+* Clean objects (only object files) : `make cleanobj`
+* Clean everything (all binaries) : `make cleanall`
+* Default Clean (only object files) : `make clean`
