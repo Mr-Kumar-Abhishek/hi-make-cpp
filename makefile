@@ -6,17 +6,18 @@ CC=g++
 # CFLAGS would be the options that will pass to the compiler
 
 CFLAGS=-c -Wall
+LDFLAGS=
+SOURCES=main.cpp hello.cpp
+OBJECTS=$(SOURCES:.cpp=.o)
+EXECUTABLE=hello
 
-all: hello
+all: $(SOURCES) $(EXECUTABLE)
 
-hello: main.o hello.o
-	$(CC) main.o hello.o -o hello
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
 
-main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp
-
-hello.o: hello.cpp
-	 $(CC) $(CFLAGS) hello.cpp
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@
 
 cleanall:
 	rm *.o hello
