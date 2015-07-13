@@ -1,13 +1,22 @@
+# These are comments in makefile
+# The value of variable CC would g++ , the compiler to use
+
+CC=g++
+
+# CFLAGS would be the options that will pass to the compiler
+
+CFLAGS=-c -Wall
+
 all: hello
 
 hello: main.o hello.o
-	g++ main.o hello.o -o hello
+	$(CC) main.o hello.o -o hello
 
 main.o: main.cpp
-	g++ -c main.cpp
+	$(CC) $(CFLAGS) main.cpp
 
 hello.o: hello.cpp
-	g++ -c hello.cpp
+	 $(CC) $(CFLAGS) hello.cpp
 
 cleanall:
 	rm *.o hello
