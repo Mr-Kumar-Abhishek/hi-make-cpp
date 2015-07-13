@@ -1,5 +1,5 @@
 # hi-make-cpp
-A demo project in c plus plus using make
+A demo project in c plus plus using [make](http://www.gnu.org/software/make/manual/make.html)
 
 ###Build
 
